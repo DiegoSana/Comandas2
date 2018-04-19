@@ -1,0 +1,5 @@
+storage/mysql/*
+storage/app/*
+storage/logs/*
+dump.sql
+.idea
