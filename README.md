@@ -43,13 +43,13 @@ CONFIGURACION
 ### Configuraciones de Yii2Framework
 
 Archivo config/db.php
-~~~php
+~~~ php
 return [
-'class' => 'yii\db\Connection',
-'dsn' => 'mysql:host=172.20.0.2;dbname=comandas2',
-'username' => 'username',
-'password' => 'password',
-'charset' => 'utf8',
+    'class' => 'yii\db\Connection',
+    'dsn' => 'mysql:host=172.20.0.2;dbname=comandas2',
+    'username' => 'username',
+    'password' => 'password',
+    'charset' => 'utf8',
 ];
 ~~~
 
@@ -58,4 +58,13 @@ Instalar dependencias
 ```
 cd /path/to/my/project/Comandas2/comandas2
 composer install
+```
+
+Migraciones
+
+```
+php yii migrate --migrationPath=@mdm/admin/migrations
+php yii migrate --migrationPath=@yii/rbac/migrations
+php yii migrate
+php php yii migrate/up --migrationPath=@vendor/costa-rico/yii2-images/migrations
 ```
