@@ -11,7 +11,7 @@ RUN apt-get install -y mysql-client libmysqlclient-dev && docker-php-ext-install
 #RUN apt-get install -y vim git
 
 # PDO
-#RUN docker-php-ext-install pdo pdo_mysql
+RUN docker-php-ext-install pdo_mysql
 
 # GD for image processing
 RUN apt-get update && apt-get install -y \
