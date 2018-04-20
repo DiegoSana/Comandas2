@@ -130,7 +130,7 @@ $config = [
         'allowActions' => [
             //'site/*',
             //'gii/*',
-            'admin/user/signup',
+            'admin/user/logout',
             'yii2images/*',
             // The actions listed here will be allowed to everyone including guests.
             // So, 'admin/*' should not appear here in the production, of course.
