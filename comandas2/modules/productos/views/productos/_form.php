@@ -86,6 +86,7 @@ use app\modules\productos\models\ProductosOpciones;
                     <div class="box-body">
                         <div class="row">
                             <div class="col-md-12">
+                                <p class="help-block">Recomendamos que las imágenes tengan una resolución de 680x400 pixeles</p>
                                 <?= $form->field($model, 'images[]')->widget(FileInput::classname(), [
                                     'options' => [
                                         'multiple' => true,

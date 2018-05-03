@@ -25,7 +25,8 @@
         "kartik-v/yii2-widget-fileinput": "@dev",
         "raoul2000/yii2-workflow": "*",
         "himiklab/yii2-easy-thumbnail-image-helper": "*",
-        "costa-rico/yii2-images": "*"
+        "costa-rico/yii2-images": "*",
+        "himiklab/yii2-recaptcha-widget": "*"
     },
     "require-dev": {
         "yiisoft/yii2-debug": "~2.0.0",

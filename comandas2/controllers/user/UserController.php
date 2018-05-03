@@ -21,17 +21,29 @@ class UserController extends BaseUserController
     public function actionLogin()
     {
         if (!\Yii::$app->getUser()->isGuest) {
-            return $this->goHome();
+            return $this->redirect('/productos/productos');
         }
 
         $model = new Login();
         if ($model->load(\Yii::$app->getRequest()->post()) && $model->login()) {
-            return $this->goBack();
+            return $this->redirect('/productos/productos');
         } else {
             return $this->render('login', [
                 'model' => $model,
             ]);
         }
+    }
+
+
+    /**
+     * Logout
+     * @return string
+     */
+    public function actionLogout()
+    {
+        \Yii::$app->getUser()->logout();
+
+        return $this->redirect('/'.\Yii::$app->user->loginUrl[0]);
     }
 
     public function actionSignup()

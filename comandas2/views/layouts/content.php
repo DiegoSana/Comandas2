@@ -39,16 +39,15 @@ use dmstr\widgets\Alert;
     <div class="pull-right hidden-xs">
         <b>Version</b> 2.0
     </div>
-    <strong>Copyright &copy; 2014-2015 <a href="http://almsaeedstudio.com">Almsaeed Studio</a>.</strong> All rights
-    reserved.
+    <strong>Copyright &copy; 2017-2018 <a href="http://www.sofar.com.ar">Sofar Desarrollos</a>.</strong> Todos los derechos reserados.
 </footer>
 
 <!-- Control Sidebar -->
 <aside class="control-sidebar control-sidebar-dark">
     <!-- Create the tabs -->
     <ul class="nav nav-tabs nav-justified control-sidebar-tabs">
-        <li><a href="#control-sidebar-home-tab" data-toggle="tab"><i class="fa fa-home"></i></a></li>
-        <li><a href="#control-sidebar-settings-tab" data-toggle="tab"><i class="fa fa-gears"></i></a></li>
+        <li><a href="#control-sidebar-home-tab"><i class="fa fa-home"></i></a></li>
+        <li class="active"><a href="#control-sidebar-settings-tab" data-toggle="tab"><i class="fa fa-gears"></i></a></li>
     </ul>
     <!-- Tab panes -->
     <div class="tab-content">
@@ -160,8 +159,20 @@ use dmstr\widgets\Alert;
         <!-- /.tab-pane -->
 
         <!-- Settings tab content -->
-        <div class="tab-pane" id="control-sidebar-settings-tab">
-            <form method="post">
+        <div class="tab-pane show active" id="control-sidebar-settings-tab">
+            <?= dmstr\widgets\Menu::widget(
+                [
+                    'items' => [
+                        [
+                            'label' => 'Aplicación movil',
+                            'icon' => 'gears',
+                            //'visible' => Yii::$app->user->can('admin'),
+                            'url' => \yii\helpers\Url::to(['/configuraciones/default']),
+                        ],
+                    ],
+                ]
+            );?>
+            <!--<form method="post">
                 <h3 class="control-sidebar-heading">General Settings</h3>
 
                 <div class="form-group">
@@ -174,7 +185,6 @@ use dmstr\widgets\Alert;
                         Some information about this general settings option
                     </p>
                 </div>
-                <!-- /.form-group -->
 
                 <div class="form-group">
                     <label class="control-sidebar-subheading">
@@ -186,7 +196,6 @@ use dmstr\widgets\Alert;
                         Other sets of options are available
                     </p>
                 </div>
-                <!-- /.form-group -->
 
                 <div class="form-group">
                     <label class="control-sidebar-subheading">
@@ -198,7 +207,6 @@ use dmstr\widgets\Alert;
                         Allow the user to show his name in blog posts
                     </p>
                 </div>
-                <!-- /.form-group -->
 
                 <h3 class="control-sidebar-heading">Chat Settings</h3>
 
@@ -208,7 +216,6 @@ use dmstr\widgets\Alert;
                         <input type="checkbox" class="pull-right" checked/>
                     </label>
                 </div>
-                <!-- /.form-group -->
 
                 <div class="form-group">
                     <label class="control-sidebar-subheading">
@@ -216,7 +223,6 @@ use dmstr\widgets\Alert;
                         <input type="checkbox" class="pull-right"/>
                     </label>
                 </div>
-                <!-- /.form-group -->
 
                 <div class="form-group">
                     <label class="control-sidebar-subheading">
@@ -224,8 +230,7 @@ use dmstr\widgets\Alert;
                         <a href="javascript::;" class="text-red pull-right"><i class="fa fa-trash-o"></i></a>
                     </label>
                 </div>
-                <!-- /.form-group -->
-            </form>
+            </form>-->
         </div>
         <!-- /.tab-pane -->
     </div>

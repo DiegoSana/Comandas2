@@ -102,6 +102,9 @@ $config = [
                 ],
             ],
         ],
+        'configuraciones' => [
+            'class' => 'app\modules\configuraciones\Module',
+        ],
         'yii2images' => [
             'class' => 'rico\yii2images\Module',
             //be sure, that permissions ok
@@ -128,8 +131,8 @@ $config = [
     'as access' => [
         'class' => 'mdm\admin\components\AccessControl',
         'allowActions' => [
-            //'site/*',
-            //'gii/*',
+            'site/*',
+            'gii/*',
             'admin/user/logout',
             'yii2images/*',
             // The actions listed here will be allowed to everyone including guests.
